@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:1 00vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+.feature-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 600px;
+  justify-content: center;
+}
+
+.feature-card {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.feature-card p {
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
+.feature-card:hover {
+  border-color: #f1be32;
+  box-shadow: 0 4px 12px rgba(255, 201, 53, 0.6);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px; 
+  border: 2px solid #000;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px
+}
+
+input[type="checkbox"]:checked {
+  background-color: #f1be32;
+  border-color: #dba102;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
