@@ -1,0 +1,95 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+  text-align: center;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 400px;
+  padding: 0 5px 5px 5px;
+  margin: 20px auto;
+  border: 1px solid grey;
+  gap: 20px;
+}
+
+.pricing-card {
+  display: flex;
+  flex: 0 0 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  background-color: beige;
+  text-align: center;
+  transition: 0.3s;
+  padding: 5px
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+}
+
+.basic-plan {
+  order: 0;
+}
+
+.pro-plan {
+  order: 1;
+  flex-grow: 2;
+  background-color:blanchedalmond;
+}
+
+.premium-plan {
+  order: 2;
+}
+
+a {
+  border: 1px solid orange;
+  background-color: #e9830e;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+
+a:hover {
+  background-color: #da8e37;
+}
+
+.pricing {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.feature {
+  font-size: 12px;
+  text-align: left;
+  list-style-type: none;
+}
+
+
+.check {
+  color: #219c54;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.cross {
+  color: #e00f0f;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+ul {
+  padding-left: 10px;
+  padding-right: 10px;;
+}
