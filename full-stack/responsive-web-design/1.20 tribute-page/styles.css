@@ -1,0 +1,45 @@
+#main {
+  background-color: beige;
+  font-family: 'Courier New', Courier, monospace;
+  width: auto;
+  padding: 0 10px 0 10px;
+}
+
+#title, #subtitle {
+  text-align: center;
+}
+
+#title {
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+#subtitle {
+  margin-top: 0;
+}
+
+#image {
+  max-width: 100%;
+  margin: 10px auto;
+  display: block;
+  height: auto;
+}
+
+#img-caption {
+  font-size: x-small;
+  text-align: center;
+}
+
+#tribute-info {
+  text-align: center;
+  padding: 0 80px 0 80px;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+a::before {
+  content: "🤘 ";
+}
