@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.columns {
+  background-color: lightblue;
+}
+
+th {
+  padding: 0.4em;
+}
+
+tr[class="read"] {
+  background-image: linear-gradient(hsl(120, 100%, 85%, 0.6), hsl(120, 100%, 65%, 0.6));
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(hsl(40, 100%, 85%, 0.60), hsl(40, 100%, 65%, 0.6));
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(hsl(120, 20%, 95%, 0.6), hsl(120, 20%, 75%, 0.6));
+}
+
+span {
+  display: inline-block;
+  text-align: center;
+}
+
+span[class="status"], span[class^="rate"] {
+  height: 1.85em;
+  width: 7em;
+  padding: 0.3em;
+}
+
+span[class="status"] {
+  border-radius: 20%/60%;
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 2px solid crimson;
+  background-image: linear-gradient(hsl(5, 100%, 75%), hsl(5, 100%, 50%));
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 2px solid orange;
+  background-image: linear-gradient(hsl(40, 90%, 75%), hsl(40, 90%, 50%));;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 0.1em solid hsl(120, 75%, 45%);
+  background-image: linear-gradient(hsl(120, 75%, 75%), hsl(120, 75%, 50%));
+}
+
+span[class^="rate"] > span {
+  border: 0.1em solid hsl(0, 0%, 50%);
+  border-radius: 50%;
+  background-color: hsl(0, 15%, 95%);
+  height: 100%;
+  width: 20%;
+  margin: 0.1em;
+}
+
+span[class~="two"] span:nth-child(1), span[class~="two"] span:nth-child(2) {
+  background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+
+span[class~="one"] span:nth-child(1) {
+  background-image: linear-gradient(hsl(50, 100%, 70%), hsl(50, 100%, 50%));
+}
+
