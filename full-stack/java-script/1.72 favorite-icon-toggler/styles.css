@@ -1,0 +1,28 @@
+button {
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: #dfd9d9;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #dfd9d9 2px solid;
+  padding: 0 10px 10px 10px;
+}
+
+.filled {
+  color: red;
+}
