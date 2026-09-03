@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-grey: #0a0a23;
+  --light-blue: #ccdfe4;
+  --purple: #6a1ce9;
+  --red: rgb(209, 49, 49);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-container {
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--light-blue);
+  width: fit-content;   /* or a fixed value like 300px */
+  padding: 20px;         /* optional, just looks better with a visible box */
+}
+
+#text-input {
+  height: 100px;
+  width: 200px;
+}
+
+.max {
+  color: var(--red);
+}
