@@ -14,9 +14,9 @@ function pop(stack) {
 }
 
 function peek(stack) {
-	const stackTrace = stack.collection;
-	if (stackTrace.length > 0) {
-		return stackTrace[stackTrace.length - 1];
+	const items = stack.collection;
+	if (items.length > 0) {
+		return items[items.length - 1];
 	} else {
 		return undefined;
 	}
