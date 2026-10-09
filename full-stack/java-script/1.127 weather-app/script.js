@@ -61,4 +61,4 @@ async function showWeather(city) {
 
 scanBtn.addEventListener("click", () => {
 	showWeather(selectedCity.value);
-})
+});
