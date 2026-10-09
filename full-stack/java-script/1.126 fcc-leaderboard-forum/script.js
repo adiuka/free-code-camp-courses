@@ -36,11 +36,11 @@ const timeAgo = (time) => {
 }
 
 const viewCount = (views) => {
-	if (views > 1000) {
-		return `${Math.floor(views / 1000)}k`;
-	}
-	return `${views}`;
-}
+  if (views >= 1000) {
+    return `${Math.floor(views / 1000)}k`;
+  }
+  return views;
+};
 
 const forumCategory = (id) => {
 	let category;
@@ -66,7 +66,49 @@ const avatars = (posters, users) => {
 			src = `${avatarUrl}${src}`;
 		}
 
-		return `<img src="${src}" alt="${poster.name}">`;
+		return `<img src="${src}" alt="${user.name}">`;
 	}).join("");
 }
 
+const showLatestPosts = (data) => {
+	const postContainer = document.getElementById("posts-container");
+	const { users, topic_list } = data;
+	const { topics } = topic_list;
+
+	postContainer.innerHTML = topics.map((topic) => {
+		const { id, title, views, posts_count, slug, posters, category_id, bumped_at } = topic;
+
+		return `
+			<tr>
+				<td>
+					<a class="post-title" href="${forumTopicUrl}${slug}/${id}">${title}</a>
+					${forumCategory(category_id)}
+				</td>
+				<td>
+					<div class="avatar-container">${avatars(posters, users)}</div>
+				</td>
+				<td>
+					${posts_count - 1}
+				</td>
+				<td>
+					${viewCount(views)}
+				</td>
+				<td>
+					${timeAgo(bumped_at)}
+				</td>
+			</tr>
+		`;
+	}).join("");
+};
+
+const fetchData = async () => {
+	try {
+		const res = await fetch(forumLatest);
+		const data = await res.json();
+		showLatestPosts(data);
+	} catch (err) {
+		console.log(err);
+	}
+}
+
+fetchData();
