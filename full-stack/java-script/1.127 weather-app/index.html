@@ -3,7 +3,68 @@
   <head>
     <meta charset="utf-8" />
     <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
-  <body></body>
+  <body>
+  	<div id="app-container">
+			<div id="screen" class="app-screen">
+				<div class="screen-header">
+					<span>Weather-DECK // 1.0</span>
+					<span class="blink">● LIVE</span>
+				</div>
+
+				<div id="readings" class="hidden">
+					<div class="cell cell-wide">
+						<span class="label">LOCATION</span>
+						<span id="location">City</span>
+					</div>
+
+					<div class="cell cell-icon">
+						<img id="weather-icon" alt="Weather icon">
+          	<span id="weather-main">Type</span>
+					</div>
+
+					<div class="cell cell-big">
+						<span class="label">TEMP</span>
+						<span id="main-temperature">0 °C</span>
+					</div>
+
+					<div class="cell">
+						<span class="label">FEELS LIKE</span>
+						<span id="feels-like">0 °C</span>
+					</div>
+
+					<div class="cell">
+						<span class="label">HUMIDITY</span>
+						<span id="humidity">0 %</span>
+					</div>
+
+					<div class="cell">
+						<span class="label">WIND</span>
+						<span id="wind">0 m/s</span>
+					</div>
+
+					<div class="cell">
+						<span class="label">GUST</span>
+						<span id="wind-gust">0 m/s</span>
+					</div>
+				</div>
+			</div>
+
+			<div id="settings" class="app-settings">
+				<select id="city-select">
+					<option value=""></option>
+					<option value="new york">New York</option>
+					<option value="los angeles">Los Angeles</option>
+					<option value="chicago">Chicago</option>
+					<option value="paris">Paris</option>
+					<option value="tokyo">Tokyo</option>
+					<option value="london">London</option>
+				</select>
+				<button id="get-weather-btn">SCAN</button>
+			</div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
