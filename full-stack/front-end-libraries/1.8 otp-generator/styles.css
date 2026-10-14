@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #05070d;
+  background-image:
+    linear-gradient(rgba(0, 255, 200, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 200, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  font-family: "Courier New", monospace;
+  color: #00ffc8;
+}
+
+.container {
+  width: min(90vw, 420px);
+  padding: 32px;
+  text-align: center;
+  background: rgba(8, 14, 24, 0.9);
+  border: 1px solid #00ffc8;
+}
+
+#otp-title {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #ff2bd6;
+  text-shadow: 0 0 8px #ff2bd6;
+}
+
+#otp-display {
+  margin: 0 0 16px;
+  font-size: 1.6rem;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 10px #00ffc8;
+}
+
+#otp-timer {
+  min-height: 1.5em;
+  margin: 0 0 24px;
+  font-size: 0.85rem;
+  color: #8affea;
+}
+
+#generate-otp-button {
+  padding: 12px 24px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00ffc8;
+  background: transparent;
+  border: 1px solid #00ffc8;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#generate-otp-button:hover:not(:disabled) {
+  background: #00ffc8;
+  color: #05070d;
+  box-shadow: 0 0 16px #00ffc8;
+}
+
+#generate-otp-button:disabled {
+  color: #3a4a52;
+  border-color: #3a4a52;
+  cursor: not-allowed;
+}
