@@ -6,30 +6,40 @@
     <title>Music Shopping Cart Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-		<div id="shopping-cart-container" class="flex flex-col lg:flex-row">
-			<div id="products-container">
-				<div class="card">
-					<h2 class="text-lg">Cake</h2>
-					<p class="quantity"></p>
-					<p class="price"></p>
-					<button class="remove-button bg-red-500 hover:bg-red-600">Remove</button>
+  <body class="bg-indigo-900">
+		<h1 class="text-4xl text-center font-bold text-white mt-6">Shopping Cart</h1>
+		<div id="shopping-cart-container" class="flex flex-col lg:flex-row items-center gap-8">
+			<div id="products-container" class="flex flex-col lg:flex-row gap-8 w-full md:w-2/3 px-4">
+				<div class="card flex flex-col lg:flex-1 items-center gap-6 rounded-lg border border-gray-200 py-4 my-8 bg-gray-800 text-gray-300">
+					<h2 class="text-2xl text-gray-300">Cake</h2>
+					<div class="button-container flex gap-4">
+						<button class="border border-gray px-2 text-xl font-bold hover:bg-gray-200 hover:text-gray-900">-</button>
+						<p class="quantity text-xl">4</p>
+						<button class="border border-gray px-2 text-xl font-bold hover:bg-gray-200 hover:text-gray-900">+</button>
+					</div>
+					<p class="price text-xl">$10</p>
+					<button class="remove-button bg-red-500 hover:bg-red-600 rounded-full py-2 px-4 text-gray-800 font-semibold">Remove</button>
 				</div>
 
-				<div class="card">
-					<h2 class="text-lg">Ass</h2>
-					<p class="quantity"></p>
-					<p class="price"></p>
-					<button class="remove-button bg-red-500 hover:bg-red-600">Remove</button>
+				<div class="card flex flex-col lg:flex-1 items-center gap-6 rounded-lg border border-gray-200 py-4 my-8 bg-gray-800 text-gray-300">
+					<h2 class="text-2xl text-gray-300">Ass</h2>
+					<div class="button-container flex gap-4">
+						<button class="border border-gray px-2 text-xl font-bold hover:bg-gray-200 hover:text-gray-900">-</button>
+						<p class="quantity text-xl">4</p>
+						<button class="border border-gray px-2 text-xl font-bold hover:bg-gray-200 hover:text-gray-900">+</button>
+					</div>
+					<p class="price text-xl">$60</p>
+					<button class="remove-button bg-red-500 hover:bg-red-600 rounded-full py-2 px-4 text-gray-800 font-semibold">Remove</button>
 				</div>
 			</div>
 
-			<div id="order-summary" class="rounded-lg border-gray-300">
-				<h2 class="text-xl">Order Summary</h2>
-				<p id="total" class="font-semibold text-lg">Total: </p>
-				<p id="total-amount"></p>
-				<a href="#" class="bg-blue-300 hover:bg-blue-400">Checkout</a>
+			<div id="order-summary" class="rounded-lg border border-gray-200 flex flex-col items-center py-4 px-8 bg-gray-800 text-gray-300 gap-6">
+				<h2 class="text-2xl">Order Summary</h2>
+				<p id="total" class="font-semibold text-xl">Total: </p>
+				<p id="total-amount" class="text-lg">$70</p>
+				<a href="#" class="bg-blue-300 hover:bg-blue-400 text-gray-900 px-4 py-2 rounded-full font-semibold hover:bg-blue-400">Checkout</a>
 			</div>
 		</div>
   </body>
 </html>
+
