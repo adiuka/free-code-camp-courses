@@ -1,0 +1,28 @@
+# motorcycle-shop
+
+For this lab, you have been provided with all the HTML and CSS. You are going to use TypeScript to complete the functionalities of a motorcycle shop page.
+
+Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
+
+User Stories:
+
+    1. You should create a type called Category that consists of the following possible values: 'Sport', 'Cruiser', 'Touring', 'Dirt', 'Adventure', 'Naked', 'Electric'.
+    2. You should create an interface called Motorcycle that has the following properties: an id of type string, an name of type string, an manufacturer of type string, a category of type Category, a price of type number, an image_url of type string, an created_at property of type Date, an description of type string, and a year of type number
+    3. You should create a function named fetchMotorcycles that returns a Promise resolving to an array of Motorcycle objects.
+    4. You should load Motorcycle data from the https://cdn.freecodecamp.org/curriculum/labs/data/motorcycles.json endpoint.
+    5. You should create a function named renderMotorcycleCard that takes a single Motorcycle object as a parameter and returns a string containing the HTML that contains a formatted HTML string for the motorcycle card.
+        The renderMotorCycleCard function should take a parameter called motorcycle of type Motorcycle.
+        The renderMotorCycleCard function should return a type of string.
+        Each motorcycle card component should have an img element that has a valid image and a class of motorcycle-card-image-container.
+        Each motorcycle card component should have an element with an class of motorcycle-card-year-badge that lists the year in plain text.
+        Each motorcycle card component should have an element with a class of motorcycle-card-title that lists the name of the motorcycle in plain text.
+        Each motorcycle card component should have an element with a class of motorcycle-card-manufacturer that lists the name of the motorcycle manufacturer in plain text.
+        Each motorcycle card component should have an element with a class of motorcycle-card-category that lists the category of the motorcycle in plain text.
+        Each motorcycle card component should have an element with a class of motorcycle-card-description that lists the description of the motorcycle in plain text.
+        Each motorcycle card component should have an element with a class of motorcycle-card-price that lists the price of the motorcycle in plain text.
+        Each motorcycle card component should have an element with a class of motorcycle-card-engine that lists the horsepower of each engine.
+    6. You should have a class called MotorcycleGalleryApp.
+        The class should have a private array called allMotorcycles that is statically typed to a type of an array of Motorcycle objects.
+        That class should have a function called renderMotorcycles that renders the equivalent motorcycle card components of the allMotorcycles variable inside the element with id of motorcycle-grid.
+    7. The number of Motorcycle elements that are displayed should be listed inside of an element with an id of results-number.
+    8. The filter should be updated on an input event.
