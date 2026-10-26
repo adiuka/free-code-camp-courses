@@ -75,11 +75,13 @@ h1 {
 	column; gap: 0.5rem; 
 }
 
-input {
+input, textarea {
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
 }
 
 button {
