@@ -1,0 +1,112 @@
+* { 
+	box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.main-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+h1 { 
+	margin: 0; 
+	font-size: 1.5rem; 
+	text-align: center; 
+}
+
+.app-container { 
+	width: 100%; 
+	perspective: 800px; 
+}
+
+#flashcard {
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+#flashcard.flipped { 
+	transform: rotateY(180deg); 
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  backface-visibility: hidden;
+}
+
+.card-back { 
+	transform: rotateY(180deg); 
+	background: #e8f1ff; 
+}
+
+.options-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#entry-form { 
+	display: flex; 
+	flex-direction: 
+	column; gap: 0.5rem; 
+}
+
+input, textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+button {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover { 
+	background: #2559c4; 
+}
+
+#delete-btn { 
+	background: #d64545; 
+}
+
+#delete-btn:hover { 
+	background: #b83737; 
+}
+
+#error-message { 
+	margin: 0; 
+	color: #d64545;  
+}
