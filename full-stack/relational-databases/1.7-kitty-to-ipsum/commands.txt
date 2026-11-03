@@ -1,0 +1,5 @@
+grep -n 'meow[a-z]*' kitty_ipsum_2.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt 
+grep 'cat[a-z]*' kitty_ipsum_2.txt --color
+kitty_ipsum_2.txt -o | wc -l >> kitty_info.txt
+./translate.sh kitty_ipsum_1.txt | grep -E 'dog[a-z]*|woof[a-z]*' --color
+diff --color kitty_ipsum_1.txt doggy_ipsum_1.txt 
