@@ -1,0 +1,13 @@
+ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
+INSERT INTO bikes(type, size) VALUES('Mountain', 27);
+INSERT INTO bikes(type, size) VALUES('Road', 28), ('Road', 29); 
+UPDATE bikes SET available = false WHERE available = true;
+echo '28 | Mountain' | sed 's/ |/"/'
+
+echo "$(echo '   M e   ' | sed -r 's/^ *| *$//g')." Trims the start and end of a string.
+
+SELECT bike_id, type, size FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND date_returned IS NULL ORDER BY bike_id;
+
+SELECT * FROM bikes INNER JOIN rentals USING(bike_id) INNER JOIN customers USING(customer_id) WHERE phone = '555-5555' AND date_returned IS NULL;
+
+pg_dump -U username -h localhost -d dbname > backup.sql
