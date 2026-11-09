@@ -1,0 +1,26 @@
+sudo apt install -y nodejs
+node -v
+node -e "console.log('Hello, Node')"
+node -e "console.log(2 + 2)"
+node -p "typeof process"
+node -p "Math.PI.toFixed(4)"
+echo "console.log('Hello from a file')" > hello.js
+
+node --check hello.js
+node hello.js
+
+In REPL
+> let city = "Paris"
+> city
+> 10 * 10
+100
+> _ + 5
+105
+> function double(n) { return n * 2; }
+> double(21)
+> const os = require('os')
+> os.platform()
+> .help
+> .exit
+
+echo "import { createRequire } from 'module'; console.log(typeof createRequire);" | node --input-type=module
