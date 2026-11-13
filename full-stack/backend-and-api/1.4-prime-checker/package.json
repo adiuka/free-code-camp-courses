@@ -1,0 +1,17 @@
+{
+  "name": "prime-checker",
+  "version": "1.0.0",
+  "description": "A prime checker module used to check wheter a number is a prime number",
+  "keywords": [
+    "prime",
+    "numbers",
+    "utility"
+  ],
+  "license": "MIT",
+  "author": "adiuka",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
